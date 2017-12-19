@@ -1,0 +1,11 @@
+<mat-nav-list>
+  <mat-list-item (click)="login()">{{account}}<mat-icon mat-list-icon>account_circle</mat-icon></mat-list-item>  
+  <mat-divider></mat-divider>
+  <h2 mat-subheader>Characters</h2>
+  <mat-list-item *ngFor="let menu of menuOptions" (click)="navToPage(menu)">{{menu.option}}
+      <!-- <mat-icon mat-list-icon>{{menu?.icon}}</mat-icon> -->     
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Settings</mat-list-item>
+    <mat-list-item *ngIf="signedIn()" (click)="logout()">Sign Out</mat-list-item>
+</mat-nav-list>

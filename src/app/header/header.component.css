@@ -1,0 +1,14 @@
+a{
+    cursor: pointer;
+}
+
+.navbar-default{
+      /* background-color: #27A3CC; */
+      background-color: white;
+}
+
+.navbar-right{
+    padding-right: 20px;
+    
+}
+ 
