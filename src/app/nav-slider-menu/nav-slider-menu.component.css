@@ -1,5 +1,8 @@
 .mat-list-item{
     color: #787C7D;
+    font-weight: bolder;
+    font-style: italic;
+    
 }
 
 .mat-list-icon{

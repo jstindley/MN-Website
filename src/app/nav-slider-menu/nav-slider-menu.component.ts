@@ -23,13 +23,13 @@ export class NavSliderMenuComponent implements OnInit {
     },
     {
       option: 'Owl',
-      name: 'Mars Neptune',
+      name: 'Owl',
       quote:'',
       bio: ``
     },
     {
       option: 'Heron',
-      name: 'Mars Neptune',
+      name: 'Heron',
       quote:'',
       bio: ``    
     }

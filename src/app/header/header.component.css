@@ -1,14 +1,30 @@
 a{
-    cursor: pointer;
+    cursor: default;    
 }
+
 
 .navbar-default{
       /* background-color: #27A3CC; */
-      background-color: white;
+      background:inherit;
+      border: inherit;
+      
+}
+
+ul.nav a:hover { 
+    color: #A7B4B5; 
+}
+
+ul.nav a { 
+    color: #fff; 
 }
 
 .navbar-right{
     padding-right: 20px;
     
 }
- 
+li{
+    font-style: italic;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+}
