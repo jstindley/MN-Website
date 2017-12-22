@@ -1,5 +1,5 @@
 
-<p-dialog header="{{characterName}}" [(visible)]="display" modal="modal" width="300" [responsive]="true">
+<p-dialog header="{{characterName}}" [(visible)]="display" (onHide)="close()" modal="modal" width="300" [responsive]="true">
     <h5>{{characterQuote}}</h5>    
     <div> 
         <p>{{charaterBio}}</p>

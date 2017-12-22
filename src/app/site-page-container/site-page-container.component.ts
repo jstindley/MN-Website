@@ -56,6 +56,17 @@ export class SitePageContainerComponent implements OnInit {
       }
     }
   }
+
+  close()
+  {
+    if (this.opened)
+    {
+    this.sidenav.toggle();
+    let wrapperMenu = document.querySelector('.hamburgers');
+    wrapperMenu.classList.toggle('is-active');
+    this.opened = false;
+    }
+  }
  
   display: boolean = false;
   
