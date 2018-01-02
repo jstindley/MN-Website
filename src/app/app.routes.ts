@@ -5,7 +5,6 @@ import { AboutComponent } from './about/about.component';
 import { ShopComponent } from './shop/shop.component';
 
 export const APP_ROUTES : Routes = [
-    { path: 'home', component: HomePageComponent },
     { path: 'episodes', component: EpisodesComponent },
     { path: 'about', component: AboutComponent },
     { path: 'shop', component: ShopComponent },

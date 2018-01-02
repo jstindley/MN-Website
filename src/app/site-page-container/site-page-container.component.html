@@ -1,12 +1,11 @@
 
 <p-dialog header="{{characterName}}" [(visible)]="display" (onHide)="close()" modal="modal" width="300" [responsive]="true">
-    <h5>{{characterQuote}}</h5>    
     <div> 
-        <p>{{charaterBio}}</p>
+        <p>{{characterBio}}</p>
     </div>
-    <p-footer></p-footer>
+    <p-footer><h5>"{{characterQuote}}"</h5></p-footer>
 </p-dialog> 
-<mat-sidenav-container class="example-container" (click)="test()">
+<mat-sidenav-container class="example-container" (click)="toggleDrawer()">
     <div class="twinkling"></div>
     <div class="clouds">
           <div class="hamburgers" id="hamburger-6" (click)="hamburgerToggle()">
@@ -15,16 +14,10 @@
             <div class="line"></div>
           </div>
           <app-header></app-header>
-        <router-outlet></router-outlet>
+          <router-outlet></router-outlet>
+        <!-- Where the rest of the pages go -->
     </div>  
     <mat-sidenav #sidenav class="example-sidenav" mode="push">
     <app-nav-slider-menu #navmenu (eventClick)="updateTitle($event)"></app-nav-slider-menu>
     </mat-sidenav>
 </mat-sidenav-container>
-
-<!-- <i class="fa fa-bars fa-2x hamburger" aria-hidden="true" (click)="sidenav.open()" ></i> -->
-        <!-- <div class="wrapper-menu" (click)="hamburgerToggle()">
-            <div class="line-menu half start"></div>
-            <div class="line-menu"></div>
-          <div class="line-menu half end"></div>
-          </div>      -->

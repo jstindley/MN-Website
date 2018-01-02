@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
 gotoPath(link: string){
   switch(link.toLocaleLowerCase()){
     case 'home':
-    this.router.navigate(['home']);
+    this.router.navigate(['']);
     break;
     case 'episodes':
     this.router.navigate(['episodes']);

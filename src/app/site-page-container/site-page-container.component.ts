@@ -19,7 +19,7 @@ export class SitePageContainerComponent implements OnInit {
   characterTitle: string = '';
   characterName: string = '';
   characterQuote: string = '';
-  characterBio: string = '';
+  characterBio: string = ``;
   @ViewChild('sidenav') sidenav;
   
 
@@ -29,8 +29,7 @@ export class SitePageContainerComponent implements OnInit {
     this.characterName = character.name;
     this.characterBio = character.bio;
     this.characterQuote = character.quote;
-    //alert('From the site container: ' + option);
-    //this.sidenav.close();
+    //alert('From the site container: ' + character.bio);
     this.display = true;
     
   }
@@ -42,7 +41,7 @@ export class SitePageContainerComponent implements OnInit {
     this.sidenav.toggle();
   }
 
-  test()
+  toggleDrawer()
   {
     let wrapperMenu = document.querySelector('.hamburgers');
     if(this.sidenav.opened){

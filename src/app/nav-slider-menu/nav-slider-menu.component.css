@@ -1,5 +1,5 @@
 .mat-list-item{
-    color: #787C7D;
+    color: #5F6769;
     font-weight: bolder;
     font-style: italic;
     
@@ -7,4 +7,13 @@
 
 .mat-list-icon{
     color: darkgrey;
+}
+
+.mat-subheader{
+    color:  #787C7D;
+    
+}
+
+settings{
+    color: #787C7D;
 }
