@@ -46,7 +46,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AboutComponent } from './about/about.component';
 import { EpisodesComponent } from './episodes/episodes.component';
 import { ShopComponent } from './shop/shop.component';
-import { DialogModule } from 'primeng/primeng';
+import { DialogModule, ButtonModule} from 'primeng/primeng';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { DialogModule } from 'primeng/primeng';
     HomePageComponent,
     AboutComponent,
     EpisodesComponent,
-    ShopComponent
+    ShopComponent,
+    SettingsComponent
   ],
   imports: [
     
@@ -98,8 +100,8 @@ import { DialogModule } from 'primeng/primeng';
     MatStepperModule,
     CdkTableModule,
     routing,
-    DialogModule
-
+    DialogModule,
+    ButtonModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

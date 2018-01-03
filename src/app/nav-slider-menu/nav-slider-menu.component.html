@@ -8,6 +8,6 @@
     </mat-list-item>
   </ng-container>
     <mat-divider></mat-divider>
-    <mat-list-item style="color: #787C7D">Settings</mat-list-item>
+    <mat-list-item style="color: #787C7D" (click)="navToPage('settings')">Settings</mat-list-item>
     <mat-list-item *ngIf="signedIn()" (click)="logout()">Sign Out</mat-list-item>
 </mat-nav-list>

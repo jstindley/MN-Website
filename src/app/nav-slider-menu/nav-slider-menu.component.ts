@@ -68,7 +68,6 @@ export class NavSliderMenuComponent implements OnInit {
 
   }
 
-
   navToPage(option){
     this.eventClick.emit(option);
     //this.optionTitle = option;
@@ -90,4 +89,5 @@ export class NavSliderMenuComponent implements OnInit {
     this.account = 'Sign In';
     this.loggedIn = false;
   }
+
 }

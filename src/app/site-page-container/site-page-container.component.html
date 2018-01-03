@@ -1,10 +1,19 @@
 
-<p-dialog header="{{characterName}}" [(visible)]="display" (onHide)="close()" modal="modal" width="300" [responsive]="true">
+<p-dialog header="{{characterName}}" [(visible)]="characterDisplay" (onHide)="characterClose()" modal="modal" width="300" [responsive]="true">
     <div> 
         <p>{{characterBio}}</p>
     </div>
     <p-footer><h5>"{{characterQuote}}"</h5></p-footer>
 </p-dialog> 
+<p-dialog header="Settings" [(visible)]="settingDisplay"  modal="modal" width="300" [responsive]="true" >
+    <!-- add settings component  -->
+    <app-settings></app-settings>
+    <p-footer>
+        <button type="button" pButton icon="fa-check" (click)="settingsClose()" class="ui-button-success"  label="Save"></button>
+        <button type="button" pButton icon="fa-close" (click)="settingsClose()" class="ui-button-danger" label="Cancel"></button>
+    </p-footer>
+</p-dialog>
+
 <mat-sidenav-container class="example-container" (click)="toggleDrawer()">
     <div class="twinkling"></div>
     <div class="clouds">

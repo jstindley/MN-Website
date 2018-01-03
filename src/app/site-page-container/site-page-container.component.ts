@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Routes, Router, NavigationEnd } from '@angular/router';
-import {DialogModule} from 'primeng/primeng';
+import {DialogModule, ButtonModule} from 'primeng/primeng';
 import { Chain } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-site-page-container',
@@ -21,17 +22,22 @@ export class SitePageContainerComponent implements OnInit {
   characterQuote: string = '';
   characterBio: string = ``;
   @ViewChild('sidenav') sidenav;
-  
-
+  characterDisplay: boolean = false;
+  settingDisplay: boolean = false;
 
   updateTitle(character){
+    if (character.option != null){
     this.characterTitle = character.option;
     this.characterName = character.name;
     this.characterBio = character.bio;
     this.characterQuote = character.quote;
     //alert('From the site container: ' + character.bio);
-    this.display = true;
-    
+    this.characterDisplay = true;
+    }
+    else{
+      this.settingDisplay = true;
+      
+    }
   }
 
   hamburgerToggle()
@@ -56,7 +62,8 @@ export class SitePageContainerComponent implements OnInit {
     }
   }
 
-  close()
+  closeDisplayandNav() 
+  //function that closes the nav drawer (should be used for closing the modal by the 'X')
   {
     if (this.opened)
     {
@@ -67,9 +74,18 @@ export class SitePageContainerComponent implements OnInit {
     }
   }
  
-  display: boolean = false;
+
+  settingsClose()
+  {
+    this.settingDisplay = false;
+  }
+
+  characterClose()
+  {
+    this.characterDisplay = false;
+  }
   
-      showDialog() {
-          this.display = true;
-      }
+      // showDialog() {
+      //     this.display = true;
+      // }
 }
