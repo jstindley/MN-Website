@@ -33,7 +33,7 @@ import { MatAutocompleteModule,
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatStepperModule 
+  MatStepperModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavSliderMenuComponent } from './nav-slider-menu/nav-slider-menu.component';
@@ -46,7 +46,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AboutComponent } from './about/about.component';
 import { EpisodesComponent } from './episodes/episodes.component';
 import { ShopComponent } from './shop/shop.component';
-import { DialogModule, ButtonModule} from 'primeng/primeng';
+import { DialogModule, ButtonModule, InputTextModule, PasswordModule} from 'primeng/primeng';
 import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
@@ -101,7 +101,9 @@ import { SettingsComponent } from './settings/settings.component';
     CdkTableModule,
     routing,
     DialogModule,
-    ButtonModule    
+    ButtonModule,
+    InputTextModule,
+    PasswordModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

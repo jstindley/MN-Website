@@ -5,12 +5,11 @@
     </div>
     <p-footer><h5>"{{characterQuote}}"</h5></p-footer>
 </p-dialog> 
-<p-dialog header="Settings" [(visible)]="settingDisplay"  modal="modal" width="300" [responsive]="true" >
-    <!-- add settings component  -->
+<p-dialog header="Settings" [(visible)]="settingDisplay"  modal="modal" width="500" [responsive]="true" >
     <app-settings></app-settings>
     <p-footer>
-        <button type="button" pButton icon="fa-check" (click)="settingsClose()" class="ui-button-success"  label="Save"></button>
-        <button type="button" pButton icon="fa-close" (click)="settingsClose()" class="ui-button-danger" label="Cancel"></button>
+        <button type="button" pButton icon="fa-check" (click)="settingsClose()" class="ui-button-info"  label="Save"></button>
+        <button type="button" pButton icon="fa-close" (click)="settingsClose()" class="ui-button-info" label="Cancel"></button>
     </p-footer>
 </p-dialog>
 
@@ -24,7 +23,6 @@
           </div>
           <app-header></app-header>
           <router-outlet></router-outlet>
-        <!-- Where the rest of the pages go -->
     </div>  
     <mat-sidenav #sidenav class="example-sidenav" mode="push">
     <app-nav-slider-menu #navmenu (eventClick)="updateTitle($event)"></app-nav-slider-menu>
