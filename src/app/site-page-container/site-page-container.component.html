@@ -1,4 +1,3 @@
-
 <p-dialog header="{{characterName}}" [(visible)]="characterDisplay" (onHide)="characterClose()" modal="modal" width="300" [responsive]="true">
     <div> 
         <p>{{characterBio}}</p>
@@ -12,18 +11,15 @@
         <button type="button" pButton icon="fa-close" (click)="settingsClose()" class="ui-button-info" label="Cancel"></button>
     </p-footer>
 </p-dialog>
-
-<mat-sidenav-container class="content-container" (click)="toggleDrawer()">
-    <div class="twinkling"></div>
-    <div class="clouds">
+<mat-sidenav-container [ngStyle]="DayorNight()" (click)="toggleDrawer()">
+    <div class="clouds" > <!-- figure out way to toggle based on time -->
           <div class="hamburgers" id="hamburger" (click)="hamburgerToggle()">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
-          </div>
-          <app-header></app-header>
-          <router-outlet></router-outlet>
+          </div>                 
     </div>  
+    
     <mat-sidenav #sidenav class="mn-sidenav" mode="push">
     <app-nav-slider-menu #navmenu (eventClick)="updateTitle($event)"></app-nav-slider-menu>
     </mat-sidenav>

@@ -14,7 +14,9 @@ export class SitePageContainerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+   //add function to find out if its day or night then set day variable
   }
+  day: boolean = true;
   opened: boolean = false;
   pageTitle: string = '';
   characterTitle: string = '';
@@ -24,6 +26,7 @@ export class SitePageContainerComponent implements OnInit {
   @ViewChild('sidenav') sidenav;
   characterDisplay: boolean = false;
   settingDisplay: boolean = false;
+
 
   updateTitle(character){
     if (character.option != null){
@@ -88,4 +91,45 @@ export class SitePageContainerComponent implements OnInit {
       // showDialog() {
       //     this.display = true;
       // }
+      clouds(){
+        var data;
+        if (this.day){
+          alert('true')
+          data = {
+            'background': 'transparent url(../../assets/clouds.png) repeat top left',
+            'z-index': '3',
+            '-moz-animation': 'move-clouds-back 200s linear infinite',
+            '-ms-animation': 'move-clouds-back 200s linear infinite',
+            '-o-animation': 'move-clouds-back 200s linear infinite',
+            '-webkit-animation': 'move-clouds-back 200s linear infinite',
+            'animation': 'move-clouds-back 200s linear infinite'
+          }
+        }
+        else{
+          data = {}
+        }
+        return data;
+      }
+
+      DayorNight() {
+        var data;
+        if (this.day){
+          data = {
+            'width': '100%',
+            'height': '100vh',
+            'background-image': 'linear-gradient(#236BDE,#90C3D4)', //#0290BF
+            'z-index': '1'
+          }
+        }
+        else{
+          data = {
+            'width': '100%',
+            'height': '100vh',
+            'background-image': 'url(../../assets/stars.png), linear-gradient(#000, #236BDE)',
+            'z-index': '1'
+          }
+        }
+        return data;
+      }
 }
+
