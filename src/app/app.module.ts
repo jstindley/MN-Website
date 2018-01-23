@@ -48,6 +48,7 @@ import { EpisodesComponent } from './episodes/episodes.component';
 import { ShopComponent } from './shop/shop.component';
 import { DialogModule, ButtonModule, InputTextModule, PasswordModule} from 'primeng/primeng';
 import { SettingsComponent } from './settings/settings.component';
+import { NavMenuDataService } from './services/nav-menu-data.service';
 
 @NgModule({
   declarations: [
@@ -105,7 +106,7 @@ import { SettingsComponent } from './settings/settings.component';
     InputTextModule,
     PasswordModule 
   ],
-  providers: [],
+  providers: [NavMenuDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -19,6 +19,7 @@ gotoPath(link: string){
     this.router.navigate(['']);
     break;
     case 'episodes':
+
     this.router.navigate(['episodes']);
     break;
     case 'about':

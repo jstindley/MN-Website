@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Routes, Router, NavigationEnd } from '@angular/router';
+import { Routes, Router, NavigationEnd, NavigationStart, Event } from '@angular/router';
 import {DialogModule, ButtonModule} from 'primeng/primeng';
 import { Chain } from '@angular/compiler';
 
@@ -11,11 +11,19 @@ import { Chain } from '@angular/compiler';
 })
 export class SitePageContainerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { 
+//     this.router.events.subscribe((event : Event) => {
+//       if(event instanceof NavigationEnd) {
+//         this.menu = this.getMenu();
+//       }
+//  });
+  }
 
   ngOnInit() {
    //add function to find out if its day or night then set day variable
   }
+
+  
   day: boolean = true;
   opened: boolean = false;
   pageTitle: string = '';
@@ -26,7 +34,7 @@ export class SitePageContainerComponent implements OnInit {
   @ViewChild('sidenav') sidenav;
   characterDisplay: boolean = false;
   settingDisplay: boolean = false;
-
+  //menu: string = 'help';
 
   updateTitle(character){
     if (character.option != null){
@@ -111,7 +119,7 @@ export class SitePageContainerComponent implements OnInit {
         return data;
       }
 
-      DayorNight() {
+      DayorNight(timer: number) {
         var data;
         if (this.day){
           data = {
@@ -130,6 +138,34 @@ export class SitePageContainerComponent implements OnInit {
           }
         }
         return data;
+      }
+
+      getTime(){
+        var currentTime = new Date();
+        var hour = currentTime.getHours();
+        var min = currentTime.getMinutes();
+        var secs = currentTime.getSeconds();
+        var now = Date.now()
+
+      }
+
+      getMenu(): string {
+        var path = this.router.url.replace('/','');
+        var result;
+
+        switch (path){
+          case '':
+          result = 'home';
+          break;
+          case 'episodes':
+          result = path;
+          break;
+          default:
+          result = 'Nah';
+          break;
+        }
+        alert(result);
+        return result;
       }
 }
 

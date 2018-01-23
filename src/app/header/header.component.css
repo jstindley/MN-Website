@@ -4,8 +4,9 @@ a{
 
 
 .navbar-default{
-      /* background-color: #27A3CC; */
-      background:inherit;
+      /* background-color: #27A3CC;*/ 
+      background: rgba(85, 115, 121, 0.297);
+    
       border: inherit;
       
 }

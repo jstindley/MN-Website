@@ -1,3 +1,32 @@
-p, h2{
-    color: white;
+
+div.pageSections {
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid red; 
+    margin-bottom: 7vh;
 }
+
+div.pageSections p {
+    margin-right: 20px;
+    margin-left: 20px;
+    color: white;
+    text-align: center;
+    }
+
+    div.container6 h2 {
+        margin: 0 }
+
+.boxed{
+    border: dotted green;
+     margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.boxed p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px
+}
+
+
