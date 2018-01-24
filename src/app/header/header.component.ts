@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Routes, RouterModule, Router} from '@angular/router';
+import {Routes, RouterModule, Router, RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +13,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-gotoPath(link: string){
+//way that I navigated to pages before using RouterLink
+  gotoPath(link: string){
   switch(link.toLocaleLowerCase()){
     case 'home':
     this.router.navigate(['']);
