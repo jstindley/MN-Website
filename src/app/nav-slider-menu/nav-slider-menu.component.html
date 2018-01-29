@@ -2,7 +2,7 @@
   <mat-list-item (click)="login()">{{account}}<mat-icon mat-list-icon>account_circle</mat-icon></mat-list-item>  
   <mat-divider></mat-divider>
  <ng-container> <!-- add logice for different options per page --> 
-  <h2 mat-subheader>Mercury Phoenix Crew</h2>
+  <h2 mat-subheader >{{subHeader}}</h2>
     <mat-list-item *ngFor="let menu of menuOptions" (click)="navToPage(menu)">{{menu.option}}
       <!-- <mat-icon mat-list-icon>{{menu?.icon}}</mat-icon> -->     
     </mat-list-item>

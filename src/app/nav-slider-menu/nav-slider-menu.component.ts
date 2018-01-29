@@ -13,7 +13,7 @@ export class NavSliderMenuComponent implements OnInit {
   @Output() eventClick = new EventEmitter();
 
   menuOptions: menuOption[];
-
+  subHeader: string = '';
   loggedIn: boolean = false;
   account: string = 'Sign In'
 
@@ -24,6 +24,7 @@ export class NavSliderMenuComponent implements OnInit {
           
           let page =  this.router.url.replace('/','');
           //alert(page);
+          this.getSubHeader(page);
           this.getNavData(page);
       }
   });
@@ -42,6 +43,25 @@ export class NavSliderMenuComponent implements OnInit {
     (menuOption => this.menuOptions = menuOption);
   }
 
+  getSubHeader(page: string)
+  {
+    switch (page){
+      case "":
+      case "about":
+      this.subHeader = 'Mercury Phoenix Crew';
+      break;
+      case "episodes":
+      this.subHeader = 'Episodes';
+      break;
+      case "shop":
+      this.subHeader = 'Shop';
+      break;
+      default:
+      this.subHeader = 'Mercury Phoenix Crew';
+      break;
+    }
+  }
+
   navToPage(option){
     this.eventClick.emit(option);
     //this.optionTitle = option;
@@ -49,6 +69,12 @@ export class NavSliderMenuComponent implements OnInit {
   
   signedIn(){
     return this.loggedIn;
+  }
+
+  characterNav(){
+    let result;
+
+    return result;
   }
 
   login()
